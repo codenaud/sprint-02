@@ -390,7 +390,7 @@ console.log(objecte1);
 // -------------------------------------------------------------------
 
 console.log('----------------------------------------------');
-console.log('## Nivel 2 [RSO]');
+
 console.log('# Ejercicio 4');
 
 /*  -- Ejercicio 4 :
@@ -425,7 +425,7 @@ argumentos(...argArray);
 // -------------------------------------------------------------------
 
 console.log('----------------------------------------------');
-console.log('## Nivel 3 [RSO]');
+
 console.log('# Ejercicio 6');
 
 /*  -- Ejercicio 6 :
@@ -478,7 +478,7 @@ console.log(dobles);
 // -------------------------------------------------------------------
 
 console.log('----------------------------------------------');
-console.log('## Nivel 2 [AT]');
+
 console.log('# Ejercicio 2');
 
 /*  -- Ejercicio 2 :
@@ -492,7 +492,7 @@ console.log(numerosPares);
 // -------------------------------------------------------------------
 
 console.log('----------------------------------------------');
-console.log('## Nivel 3 [AT]');
+
 console.log('# Ejercicio 3');
 
 /*  -- Ejercicio 3 :
@@ -507,7 +507,7 @@ console.log(numFind);
 // -------------------------------------------------------------------
 
 console.log('----------------------------------------------');
-console.log('## Nivel 4 [AT]');
+
 console.log('# Ejercicio 4');
 
 /*  -- Ejercicio 4 :
@@ -601,3 +601,88 @@ console.log('# Ejercicio 1');
 
 /*  -- Ejercicio 1 :
     -- Bucle forEach */
+
+let nombres = ['Anna', 'Bernat', 'Clara'];
+nombres.forEach((nombre) => console.log(nombre));
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 2');
+
+/*  -- Ejercicio 2 :
+    -- For of */
+
+let nombres2 = ['Anna', 'Bernat', 'Clara'];
+for (const nombre of nombres) {
+  console.log(nombre);
+}
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 3');
+
+/*  -- Ejercicio 3 :
+    -- Filter */
+
+console.log('# ► Array utilizada => [1, 2, 3, 4, 5, 6]');
+let numeros7 = [1, 2, 3, 4, 5, 6];
+
+const numPares = numeros7.filter((numero) => numero % 2 == 0);
+console.log(numPares);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [AL]');
+console.log('# Ejercicio 4');
+
+/*  -- Ejercicio 4 :
+    -- for in - imprime clave y valor*/
+
+let obj = {
+  nombre: 'Ola',
+  edad: 25,
+  ciudad: 'Barcelona',
+};
+
+for (const property in obj) {
+  console.log(`${property}: ${obj[property]}`);
+}
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 5');
+
+/*  -- Ejercicio 5 :
+    -- for of con break */
+
+console.log('# ► Array utilizada => [1, 2, 3, 4, 5, 6]');
+let numeros8 = [1, 2, 3, 4, 5, 6];
+for (const numero of numeros) {
+  if (numero == 5) {
+    break;
+  } else {
+    console.log(numero);
+  }
+}
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [AL]');
+console.log('# Ejercicio 6');
+
+/*  -- Ejercicio 5 :
+    -- for of con index */
+
+let nombres3 = ['Anna', 'Bernat', 'Clara'];
+
+for (const [index, value] of nombres.entries()) {
+  console.log(index, value);
+}
