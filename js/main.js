@@ -686,3 +686,18 @@ let nombres3 = ['Anna', 'Bernat', 'Clara'];
 for (const [index, value] of nombres.entries()) {
   console.log(index, value);
 }
+
+// -------------------------------------------------------------------
+console.log('%cBloc 1.7: Promises & Async/Await', styleLog);
+console.log('----------------------------------------------');
+console.log('### Promises & Async/Await');
+console.log('----------------------------------------------');
+console.log('## Nivel 1 [PAA]');
+console.log('# Ejercicio 1');
+
+/*  -- Ejercicio 1 :
+    -- Creación de una Promesa */
+
+const promesa = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Hola, mundo'), 2000);
+});
