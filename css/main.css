@@ -30,6 +30,19 @@
 .pt-2 {
   padding-top: calc(var(--pico-spacing) * 2);
 }
+/* - Bottom - */
+.pb-03 {
+  padding-bottom: calc(var(--pico-spacing) * 0.3);
+}
+.pb-05 {
+  padding-bottom: calc(var(--pico-spacing) * 0.5);
+}
+.pb-1 {
+  padding-bottom: calc(var(--pico-spacing) * 1);
+}
+.pb-2 {
+  padding-bottom: calc(var(--pico-spacing) * 2);
+}
 
 /* --- styles ---- */
 .chapter {
