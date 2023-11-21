@@ -28,153 +28,150 @@
 
 <body>
     <header class="container">
-        <nav>
-            <ul>
-                <li><strong>Brand</strong></li>
-            </ul>
-            <ul>
-                <li><a class="chapter" href="#arrow-functions" title="Arrow Functions">AF</a></li>
-                <li><a class="chapter" href="#operador-ternario" title="Operador ternario">OT</a></li>
-                <li><a class="chapter" href="#callbacks" title="Callbacks">CB</a></li>
-            </ul>
-        </nav>
+        <hgroup>
+            <p class="chapter">Components</p>
+            <h1>Sprint 2</h1>
+            <p>JavaScript Nivel 1</p>
+        </hgroup>
+        <hr>
+        <aside class="pt-1" id="table-of-contents">
+            <nav>
+                <details open="">
+                    <summary>Content</summary>
+                    <ul>
+                        <li><a class="secondary" href="#arrow-functions" aria-current="page">Arrow functions</a></li>
+                        <li><a class="secondary" href="#operador-ternario">Operador ternario</a></li>
+                        <li><a class="secondary" href="#callbacks">Callbacks</a></li>
+                        <li><a class="secondary" href="#rest-spread-operators">Rest & Spread operators</a></li>
+                        <li><a class="secondary" href="#array-transformation">Array transformations</a></li>
+                        <li><a class="secondary" href="#array-loops">Array loops</a></li>
+                        <li><a class="secondary" href="#promises-async-await">Promises & Async/Await</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </aside>
     </header>
-    <main class="container">
+
+    <main class="container pt-0">
         <!-- section title [Arrow functions]-->
         <section id="arrow-functions">
-            <h1>(AF) Arrow functions </h1>
-            <!-- section nav -->
-            <section class="container pt-1">
-                <aside>
-                    <nav>
-                        <ul>
-                            <li><a href="#af-nivel-1">Nivel 1</a></li>
-                            <li><a href="#af-nivel-2">Nivel 2</a></li>
-                            <li><a href="#af-nivel-3">Nivel 3</a></li>
-                        </ul>
-                    </nav>
-                </aside>
-            </section>
+            <article>
+                <h1 class="mb-0">Arrow functions </h1>
+                <!-- section nav -->
+                <nav>
+                    <ul>
+                        <li><a class="chapter" href="#af-nivel-1">Nivel 1</a></li>
+                        <li><a class="chapter" href="#af-nivel-2">Nivel 2</a></li>
+                        <li><a class="chapter" href="#af-nivel-3">Nivel 3</a></li>
+                    </ul>
+                </nav>
+            </article>
             <!-- Nivel 1 -->
             <section id="af-nivel-1">
-                <h2><mark>Nivel 1</mark></h2>
+                <h2 class="chapter">Nivel 1</h2>
                 <hr>
 
                 <!-- Ejercicio 1 -->
-                <hgroup class="pt-1">
+                <hgroup class="pt-1 ">
                     <h3>Ejercicio 1</h3>
                     <p class="pt-1">Conversión de funciones: Tienes una función add que acepta dos parámetros y devuelve
-                        su suma.
-                        Conviértela en una función de flecha. Por ejemplo:
+                        su suma. Conviértela en una función de flecha. Por ejemplo:
                         <kbd class="mt-03">function add(a, b) {return a + b;}.</kbd>
                     </p>
                 </hgroup>
                 <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                        data-placement="right">Solution
-                        ►</ins></p>
+                        data-placement="right">Ver Solución ►</ins></p>
 
                 <!-- Ejercicio 2 -->
 
                 <hgroup class="pt-1">
                     <h3>Ejercicio 2</h3>
                     <p class="pt-1">Función de flecha sin parámetros: Crea una función de flecha llamada randomNumber
-                        que no necesite
-                        parámetros y que devuelva un número aleatorio entre 0 y 100.</p>
+                        que no necesite parámetros y que devuelva un número aleatorio entre 0 y 100.</p>
                 </hgroup>
                 <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                        data-placement="right">Solution
-                        ►</ins></p>
+                        data-placement="right">Ver Solución ►</ins></p>
 
                 <!-- Ejercicio 3 -->
 
                 <hgroup class="pt-1">
                     <h3>Ejercicio 3</h3>
                     <p class="pt-1">Uso de 'this' en las funciones de flecha: Crea una clase 'person' que tenga una
-                        propiedad
-                        <em>name</em> y una función <em>greet</em> que utilice una función de flecha. La función tiene
-                        que imprimir un saludo que incluya el nombre de la persona. Por ejemplo:
+                        propiedad <em>name</em> y una función <em>greet</em> que utilice una función de flecha. La
+                        función tiene que imprimir un saludo que incluya el nombre de la persona. Por ejemplo:
                         <kbd class="mt-03"> console.log(Hola, ${this.name});</kbd>
                     </p>
                 </hgroup>
                 <p class="pb-1"><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                        data-placement="right">Solution
-                        ►</ins></p>
+                        data-placement="right">Ver Solución ►</ins></p>
 
                 <!-- Nivel 2 -->
                 <section id="af-nivel-2">
-                    <h2><mark>Nivel 2</mark></h2>
+                    <h2 class="chapter">Nivel 2</h2>
                     <hr>
 
                     <!-- Ejercicio 4 -->
                     <hgroup>
                         <h3>Ejercicio 4</h3>
                         <p class="pt-1">Función de flecha dentro de un loop: Crea una función llamada printNumbers que
-                            acepte un
-                            array de números y utilice un loop for para imprimir cada número a la consola utilizando una
-                            función de flecha.
+                            acepte un array de números y utilice un loop for para imprimir cada número a la consola
+                            utilizando una función de flecha.
                         </p>
                     </hgroup>
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
                 <!-- Nivel 3 -->
                 <section id="af-nivel-3">
-                    <h2><mark>Nivel 3</mark></h2>
+                    <h2 class="chapter">Nivel 3</h2>
                     <hr>
 
                     <!-- Ejercicio 5 -->
                     <hgroup>
                         <h3>Ejercicio 5</h3>
                         <p class="pt-1">Función de flecha con 'setTimeout': Crea una función de flecha que imprima un
-                            mensaje a la
-                            consola después de esperar 3 segundos.
+                            mensaje a la consola después de esperar 3 segundos.
                         </p>
                     </hgroup>
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
                 <!-- section [back to #arrow-functions]-->
                 <aside>
                     <nav>
                         <ul>
-                            <li><a class="chapter" href="#arrow-functions">▲ Volver a Arrow Functions</a></li>
+                            <li><a class="chapter" href="#table-of-contents">▲ Volver al Inicio</a></li>
                         </ul>
                     </nav>
                 </aside>
             </section>
 
-            <hr>
-
             <!-- section title [Operador Ternario]-->
             <section id="operador-ternario">
-                <h1>(OT) Operador ternario</h1>
-                <!-- section nav -->
-                <section class="container pt-1">
-                    <aside>
-                        <nav>
-                            <ul>
-                                <li><a href="#ot-nivel-1">Nivel 1</a></li>
-                                <li><a href="#ot-nivel-2">Nivel 2</a></li>
-                                <li><a href="#ot-nivel-3">Nivel 3</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
-                </section>
+                <article>
+                    <h1 class="mb-0">Operador ternario</h1>
+                    <!-- section nav -->
+                    <nav>
+                        <ul>
+                            <li><a class="chapter" href="#ot-nivel-1">Nivel 1</a></li>
+                            <li><a class="chapter" href="#ot-nivel-2">Nivel 2</a></li>
+                            <li><a class="chapter" href="#ot-nivel-3">Nivel 3</a></li>
+                        </ul>
+                    </nav>
+                </article>
+
                 <!-- Nivel 1 -->
                 <section id="ot-nivel-1">
-                    <h2><mark>Nivel 1</mark></h2>
+                    <h2 class="chapter">Nivel 1</h2>
                     <hr>
 
                     <!-- Ejercicio 1 -->
                     <hgroup class="pt-1">
                         <h3>Ejercicio 1</h3>
                         <p class="pt-1">Operador ternario básico: Escribe una función <em>potConduir</em> que acepte la
-                            edad como
-                            parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la
-                            edad es 18 o más,tiene que devolver 'Puedes conducir'. Si no, tiene que devolver 'No puedes
-                            conducir'.
+                            edad como parámetro y utilice el operador ternario para determinar si el usuario puede
+                            conducir. Si la edad es 18 o más,tiene que devolver 'Puedes conducir'. Si no, tiene que
+                            devolver 'No puedes conducir'.
                         </p>
                     </hgroup>
 
@@ -187,17 +184,16 @@
                     <p id="aptoParaConducir"></p>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
 
                     <!-- Ejercicio 2 -->
 
                     <hgroup class="pt-1 ">
                         <h3>Ejercicio 2</h3>
                         <p class="pt-1">Uso con <strong>operadores de comparación</strong>: Escribe una expresión que
-                            utilice el
-                            operador ternario para determinar qué de los dos números dados (num1 y num2) es más grande.
-                            Si 'num1' es más grande, devuelve 'num1 es más grande'. Si no, devuelve 'num2 es más
-                            grande'.
+                            utilice el operador ternario para determinar qué de los dos números dados (num1 y num2) es
+                            más grande. Si 'num1' es más grande, devuelve 'num1 es más grande'. Si no, devuelve 'num2 es
+                            más grande'.
                         </p>
                     </hgroup>
 
@@ -210,12 +206,12 @@
                     <p id="resultadoCompararNum"></p>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
 
                 <!-- Nivel 2 -->
                 <section id="ot-nivel-2">
-                    <h2><mark>Nivel 2</mark></h2>
+                    <h2 class="chapter">Nivel 2</h2>
                     <hr>
 
                     <!-- Ejercicio 3 -->
@@ -246,12 +242,12 @@
                     <p id="maxNum"></p>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
 
                 <!-- Nivel 3 -->
                 <section id="ot-nivel-3">
-                    <h2><mark>Nivel 3</mark></h2>
+                    <h2 class="chapter">Nivel 3</h2>
                     <hr>
 
                     <!-- Ejercicio 4 -->
@@ -263,39 +259,36 @@
                         </p>
                     </hgroup>
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
                 <!-- section [back to #operador-ternario]-->
                 <aside>
                     <nav>
                         <ul>
-                            <li><a class="chapter" href="#operador-ternario">▲ Volver a Operador Ternario</a></li>
+                            <li><a class="chapter" href="#table-of-contents">▲ Volver al Inicio</a></li>
                         </ul>
                     </nav>
                 </aside>
             </section>
 
-            <hr>
-
-            <!-- section title [Operador Ternario]-->
+            <!-- section title [Callbacks]-->
             <section id="callbacks">
-                <h1>(CB) Callbacks</h1>
-                <!-- section nav -->
-                <section class="container pt-1">
-                    <aside>
-                        <nav>
-                            <ul>
-                                <li><a href="#cb-nivel-1">Nivel 1</a></li>
-                                <li><a href="#cb-nivel-2">Nivel 2</a></li>
-                                <li><a href="#cb-nivel-3">Nivel 3</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
-                </section>
+
+                <article>
+                    <h1 class="mb-0">Callbacks</h1>
+                    <!-- section nav -->
+                    <nav>
+                        <ul>
+                            <li><a class="chapter" href="#cb-nivel-1">Nivel 1</a></li>
+                            <li><a class="chapter" href="#cb-nivel-2">Nivel 2</a></li>
+                            <li><a class="chapter" href="#cb-nivel-3">Nivel 3</a></li>
+                        </ul>
+                    </nav>
+                </article>
+
                 <!-- Nivel 1 -->
                 <section id="cb-nivel-1">
-                    <h2><mark>Nivel 1</mark></h2>
+                    <h2 class="chapter">Nivel 1</h2>
                     <hr>
 
                     <!-- Ejercicio 1 -->
@@ -308,7 +301,7 @@
                     </hgroup>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
 
                     <!-- Ejercicio 2 -->
 
@@ -322,11 +315,11 @@
                     </hgroup>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
                 <!-- Nivel 2 -->
                 <section id="cb-nivel-2">
-                    <h2><mark>Nivel 2</mark></h2>
+                    <h2 class="chapter">Nivel 2</h2>
                     <hr>
 
                     <!-- Ejercicio 3 -->
@@ -338,7 +331,7 @@
                     </hgroup>
 
                     <p class="pb-1"><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
 
                     <!-- Ejercicio 4 -->
                     <hgroup>
@@ -349,12 +342,12 @@
                     </hgroup>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
 
                 <!-- Nivel 3 -->
                 <section id="cb-nivel-3">
-                    <h2><mark>Nivel 3</mark></h2>
+                    <h2 class="chapter">Nivel 3</h2>
                     <hr>
 
                     <!-- Ejercicio 4 -->
@@ -366,22 +359,140 @@
                         </p>
                     </hgroup>
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Ver Solución ►</ins></p>
                 </section>
 
                 <!-- section [back to #callbacks]-->
                 <aside>
                     <nav>
                         <ul>
-                            <li><a class="chapter" href="#callbacks">▲ Volver a Callbacks</a></li>
+                            <li><a class="chapter" href="#table-of-contents">▲ Volver al Inicio</a></li>
                         </ul>
                     </nav>
                 </aside>
             </section>
 
-            <hr>
+            <!-- section title [Rest & Spread operators]-->
+            <section id="rest-spread-operators">
+
+                <article>
+                    <h1 class="mb-0">Rest & Spread operators</h1>
+                    <!-- section nav -->
+                    <nav>
+                        <ul>
+                            <li><a class="chapter" href="#rsp-nivel-1">Nivel 1</a></li>
+                            <li><a class="chapter" href="#rsp-nivel-2">Nivel 2</a></li>
+                            <li><a class="chapter" href="#rsp-nivel-3">Nivel 3</a></li>
+                        </ul>
+                    </nav>
+                </article>
+
+                <!-- Nivel 1 -->
+                <section id="rsp-nivel-1">
+                    <h2 class="chapter">Nivel 1</h2>
+                    <hr>
+
+                    <!-- Ejercicio 1 -->
+                    <hgroup class="pt-1">
+                        <h3>Ejercicio 1</h3>
+                        <p class="pt-1">Operador Spread en Arrays: Crea dos arrays, array1 y array2. Utiliza el operador
+                            spread para crear una tercera array que contenga todos los elementos de array1 y array2.
+                        </p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+
+                    <!-- Ejercicio 2 -->
+
+                    <hgroup class="pt-1 ">
+                        <h3>Ejercicio 2</h3>
+                        <p class="pt-1">Operadora Rest en Funciones: Crea una función 'suma' que utilice el operador
+                            rest para aceptar un número indeterminado de argumentos y devolver su suma.
+                        </p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+                </section>
+
+                <!-- Nivel 2 -->
+                <section id="rsp-nivel-2">
+                    <h2 class="chapter">Nivel 2</h2>
+                    <hr>
+
+                    <!-- Ejercicio 3 -->
+                    <hgroup>
+                        <h3>Ejercicio 3</h3>
+                        <p class="pt-1">Copiando objetos con Spread: Crea un objeto 'objecte1'. Después crea un segundo
+                            objeto, 'objecte2', que sea una copia de 'objecte1' utilizando el operador spread. Cambia
+                            una propiedad de 'objecte2' y comprueba que 'objecte1' no ha cambiado</p>
+                    </hgroup>
+
+                    <p class="pb-1"><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+
+                    <!-- Ejercicio 4 -->
+                    <hgroup>
+                        <h3>Ejercicio 4</h3>
+                        <p class="pt-1">Ristra en Destructuring: Crea una array con varios elementos. Utiliza
+                            destructuring y la operadora ristra para asignar los primeros dos elementos a variables, y
+                            después asignar el resto de los elementos a una tercera variable.</p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+                </section>
+
+                <!-- Nivel 3 -->
+                <section id="rsp-nivel-3">
+                    <h2 class="chapter">Nivel 3</h2>
+                    <hr>
+
+                    <!-- Ejercicio 5 -->
+                    <hgroup>
+                        <h3>Ejercicio 5</h3>
+                        <p class="pt-1">Spread en Funciones: Crea una función que acepte tres argumentos. Después, crea
+                            una array con tres elementos y llamamiento la función utilizando el operador spread con esta
+                            array.
+                        </p>
+                    </hgroup>
+                    <p class="pb-1"><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+
+                    <!-- Ejercicio 6 -->
+                    <hgroup>
+                        <h3>Ejercicio 6</h3>
+                        <p class="pt-1">Fusionando Objetos con Spread: Crea dos objetos con propiedades diferentes.
+                            Utiliza el operador spread para fusionar estos dos objetos en un de nuevo.</p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Ver Solución ►</ins></p>
+                </section>
+
+                <!-- section [back to #callbacks]-->
+                <aside>
+                    <nav>
+                        <ul>
+                            <li><a class="chapter" href="#table-of-contents">▲ Volver al Inicio</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </section>
     </main>
+    <footer>
+        <div class="container">
+            <p>Created by<!-- --> <a rel="noopener noreferrer" class="contrast" href="https://github.com/codenaud"
+                    target="_blank">@codenaud </a>
+                <!-- -->with the help of an
+                amazing community.</p>
+
+            <p><span> <i class="bi bi-github"></i></span> Coded in <!-- -->Bcn<!-- -->.</p>
+        </div>
+        </div>
+    </footer>
+
 
 
     <!-- Custom Javascript -->
