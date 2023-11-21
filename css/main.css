@@ -121,6 +121,6 @@ details summary {
 }
 
 /* footer */
-[data-theme='dark'] footer {
+footer {
   background: linear-gradient(0deg, #0f1d2a, transparent);
 }

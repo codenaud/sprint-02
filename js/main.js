@@ -5,6 +5,7 @@ const styleLog = [
   'background: #ffd500',
   'font-size: .8rem',
   'padding: 2px 5px',
+  'margin:5px 0px',
   'border-radius:5px',
 ].join(';');
 
@@ -14,6 +15,7 @@ console.log(`%cHola, ${userName} bienvenid@!`, styleLog); */
 
 // Empezamos
 console.log('A continuación te presento las soluciones del Sprint 2 de Angular');
+console.log('%cBloc 1.1: Arrow functions', styleLog);
 console.log('----------------------------------------------');
 console.log('### Arrow functions');
 console.log('----------------------------------------------');
@@ -97,7 +99,7 @@ setTimeout(() => {
 }, 1000);
 
 // -------------------------------------------------------------------
-
+console.log('%cBloc 1.2: Operador ternario', styleLog);
 console.log('----------------------------------------------');
 console.log('### Operador Ternario');
 console.log('----------------------------------------------');
@@ -200,7 +202,7 @@ const parOImpar = (parOImparArray) => {
 parOImpar(parOImparArray);
 
 // -------------------------------------------------------------------
-
+console.log('%cBloc 1.3: Callbacks', styleLog);
 console.log('----------------------------------------------');
 console.log('### Callbacks');
 console.log('----------------------------------------------');
@@ -317,3 +319,144 @@ const cadenaCallback = (cadenaEnMayusculas) => {
 };
 let miCadena = 'como mola it academy';
 processarCadena(miCadena, cadenaCallback);
+
+// -------------------------------------------------------------------
+console.log('%cBloc 1.4: Rest & Spread operators', styleLog);
+console.log('----------------------------------------------');
+console.log('### Rest & Spread operators');
+console.log('----------------------------------------------');
+console.log('## Nivel 1 [RSO]');
+console.log('# Ejercicio 1');
+
+// Vídeo Youtube: https://youtu.be/_5V6siSlP2k?si=u7C-V1oXHbnYDa67
+
+/*  -- Ejercicio 1 :
+    -- Spread operator 2 arrays */
+
+const lista1 = [1, 2, 3, 4, 5];
+const lista2 = [6, 7, 8, 9, 10];
+
+const listaConjunta = [...lista1, ...lista2];
+console.log(listaConjunta);
+
+const listaConjuntaExtra = [...lista1, ...lista2, 11, 12, 13, 14, 15];
+console.log(listaConjuntaExtra);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 2');
+
+/*  -- Ejercicio 2 :
+    -- Operador Rest en funciones */
+
+const sumaListaNum = (...numeros) => {
+  const resultado = numeros.reduce((prevValue, nextValue) => prevValue + nextValue, 0);
+  console.log(resultado);
+};
+
+sumaListaNum(...lista1, ...lista2, ...listaConjunta, ...listaConjuntaExtra);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [RSO]');
+console.log('# Ejercicio 3');
+
+/*  -- Ejercicio 3 :
+    -- copiando objetos con spread */
+
+const objecte1 = {
+  nombre: 'Raimon',
+  edad: 25,
+  email: 'raimon@test.com',
+};
+console.log('-- Ver Objeto 1');
+console.log(objecte1);
+
+const objecte2 = { ...objecte1 };
+
+console.log('-- Ver Objeto 2 clonado de objeto 1');
+console.log(objecte2);
+
+objecte2.edad = 36;
+console.log('-- Ver Objeto 2 con edad modificada a 36');
+console.log(objecte2);
+
+console.log('-- Ver Objeto 1 sin cambios');
+console.log(objecte1);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [RSO]');
+console.log('# Ejercicio 4');
+
+/*  -- Ejercicio 4 :
+    -- Rest en Destructuring */
+
+const listaX = [1, 2, 3, 4, 5];
+
+// Utilizando destructuring y el operador rest
+const [primerElemento, segundoElemento, ...restoElementos] = listaX;
+
+console.log(primerElemento);
+console.log(segundoElemento);
+console.log(restoElementos);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [RSO]');
+console.log('# Ejercicio 5');
+
+/*  -- Ejercicio 5 :
+    -- Spread en funciones */
+
+const argArray = ['amarillo', 'azul', 'verde'];
+
+const argumentos = (...argArray) => {
+  console.log(...argArray);
+};
+
+argumentos(...argArray);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [RSO]');
+console.log('# Ejercicio 6');
+
+/*  -- Ejercicio 6 :
+    -- Fusionando Objetos con Spread */
+
+const nombre = {
+  nombre: 'Luis',
+  apellido: 'López',
+};
+const direccion = {
+  calle: 'Calle Rueda, 123',
+  localidad: 'Madrid',
+  país: 'España',
+};
+
+const usuario = {
+  ...nombre,
+  ...direccion,
+};
+
+console.log('-- Ver Objeto Nombre');
+console.log(nombre);
+console.log('-- Ver Objeto Dirección');
+console.log(direccion);
+console.log('-- Ver Objeto Fusionado');
+console.log(usuario);
+
+// -------------------------------------------------------------------
+console.log('%cBloc 1.5: Array transformations', styleLog);
+console.log('----------------------------------------------');
+console.log('### Array transformations');
+console.log('----------------------------------------------');
+console.log('## Nivel 1 [RSO]');
+console.log('# Ejercicio 1');
