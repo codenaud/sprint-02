@@ -35,6 +35,7 @@
             <ul>
                 <li><a class="chapter" href="#arrow-functions" title="Arrow Functions">AF</a></li>
                 <li><a class="chapter" href="#operador-ternario" title="Operador ternario">OT</a></li>
+                <li><a class="chapter" href="#callbacks" title="Callbacks">CB</a></li>
             </ul>
         </nav>
     </header>
@@ -60,9 +61,10 @@
                 <hr>
 
                 <!-- Ejercicio 1 -->
-                <hgroup class="pt-1 ">
+                <hgroup class="pt-1">
                     <h3>Ejercicio 1</h3>
-                    <p>Conversión de funciones: Tienes una función add que acepta dos parámetros y devuelve su suma.
+                    <p class="pt-1">Conversión de funciones: Tienes una función add que acepta dos parámetros y devuelve
+                        su suma.
                         Conviértela en una función de flecha. Por ejemplo:
                         <kbd class="mt-03">function add(a, b) {return a + b;}.</kbd>
                     </p>
@@ -73,9 +75,10 @@
 
                 <!-- Ejercicio 2 -->
 
-                <hgroup class="pt-1 ">
+                <hgroup class="pt-1">
                     <h3>Ejercicio 2</h3>
-                    <p>Función de flecha sin parámetros: Crea una función de flecha llamada randomNumber que no necesite
+                    <p class="pt-1">Función de flecha sin parámetros: Crea una función de flecha llamada randomNumber
+                        que no necesite
                         parámetros y que devuelva un número aleatorio entre 0 y 100.</p>
                 </hgroup>
                 <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
@@ -84,9 +87,10 @@
 
                 <!-- Ejercicio 3 -->
 
-                <hgroup class="pt-1 ">
+                <hgroup class="pt-1">
                     <h3>Ejercicio 3</h3>
-                    <p>Uso de 'this' en las funciones de flecha: Crea una clase 'person' que tenga una propiedad
+                    <p class="pt-1">Uso de 'this' en las funciones de flecha: Crea una clase 'person' que tenga una
+                        propiedad
                         <em>name</em> y una función <em>greet</em> que utilice una función de flecha. La función tiene
                         que imprimir un saludo que incluya el nombre de la persona. Por ejemplo:
                         <kbd class="mt-03"> console.log(Hola, ${this.name});</kbd>
@@ -104,7 +108,8 @@
                     <!-- Ejercicio 4 -->
                     <hgroup>
                         <h3>Ejercicio 4</h3>
-                        <p>Función de flecha dentro de un loop: Crea una función llamada printNumbers que acepte un
+                        <p class="pt-1">Función de flecha dentro de un loop: Crea una función llamada printNumbers que
+                            acepte un
                             array de números y utilice un loop for para imprimir cada número a la consola utilizando una
                             función de flecha.
                         </p>
@@ -121,7 +126,8 @@
                     <!-- Ejercicio 5 -->
                     <hgroup>
                         <h3>Ejercicio 5</h3>
-                        <p>Función de flecha con 'setTimeout': Crea una función de flecha que imprima un mensaje a la
+                        <p class="pt-1">Función de flecha con 'setTimeout': Crea una función de flecha que imprima un
+                            mensaje a la
                             consola después de esperar 3 segundos.
                         </p>
                     </hgroup>
@@ -164,7 +170,8 @@
                     <!-- Ejercicio 1 -->
                     <hgroup class="pt-1">
                         <h3>Ejercicio 1</h3>
-                        <p>Operador ternario básico: Escribe una función <em>potConduir</em> que acepte la edad como
+                        <p class="pt-1">Operador ternario básico: Escribe una función <em>potConduir</em> que acepte la
+                            edad como
                             parámetro y utilice el operador ternario para determinar si el usuario puede conducir. Si la
                             edad es 18 o más,tiene que devolver 'Puedes conducir'. Si no, tiene que devolver 'No puedes
                             conducir'.
@@ -174,28 +181,36 @@
                     <!-- Formulario preguntar edad -->
                     <form class="pt-1 pb-1">
                         <!-- Button -->
-                        <button type="button" onclick="potConduir()">Introducir edad</button>
+                        <button type="button" class="secondary" onclick="potConduir()">Introducir edad</button>
                     </form>
 
                     <p id="aptoParaConducir"></p>
 
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Solution ►</ins></p>
 
                     <!-- Ejercicio 2 -->
 
                     <hgroup class="pt-1 ">
                         <h3>Ejercicio 2</h3>
-                        <p>Uso con <strong>operadores de comparación</strong> : Escribe una expresión que utilice el
+                        <p class="pt-1">Uso con <strong>operadores de comparación</strong>: Escribe una expresión que
+                            utilice el
                             operador ternario para determinar qué de los dos números dados (num1 y num2) es más grande.
                             Si 'num1' es más grande, devuelve 'num1 es más grande'. Si no, devuelve 'num2 es más
                             grande'.
                         </p>
                     </hgroup>
+
+                    <!-- Formulario comparar num -->
+                    <form class="pt-1 pb-1">
+                        <!-- Button -->
+                        <button type="button" class="secondary" onclick="compararNum()">Introducir num</button>
+                    </form>
+
+                    <p id="resultadoCompararNum"></p>
+
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Solution ►</ins></p>
                 </section>
 
                 <!-- Nivel 2 -->
@@ -206,16 +221,32 @@
                     <!-- Ejercicio 3 -->
                     <hgroup>
                         <h3>Ejercicio 3</h3>
-                        <p>Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces de operadores
-                            ternarios para determinar si un número es positivo, negativo o cero.
-
-                            Operador ternario con funciones: Crea una función trobarMaxim que acepte tres parámetros (a,
-                            b, c) y utilice el operador ternario para determinar el valor máximo.
-                        </p>
+                        <p class="pt-1">Uso enlazado de operadores ternarios: Escribe una expresión que utilice enlaces
+                            de operadores ternarios para determinar si un número es positivo, negativo o cero. </p>
                     </hgroup>
+
+                    <!-- Formulario determinar num -->
+                    <form class="pt-1 pb-1">
+                        <!-- Button -->
+                        <button type="button" class="secondary" onclick="determinarNum()">Introducir num a
+                            determinar</button>
+                    </form>
+
+                    <p id="determinarNum"></p>
+
+                    <p class="text-muted">Operador ternario con funciones: Crea una función trobarMaxim que acepte tres
+                        parámetros (a,b, c) y utilice el operador ternario para determinar el valor máximo.</p>
+
+                    <!-- Formulario 3 variables -->
+                    <form class="pt-1 pb-1">
+                        <!-- Button -->
+                        <button type="button" class="secondary" onclick="maxNum()">Introduce 3 valores</button>
+                    </form>
+
+                    <p id="maxNum"></p>
+
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
-                            data-placement="right">Solution
-                            ►</ins></p>
+                            data-placement="right">Solution ►</ins></p>
                 </section>
 
                 <!-- Nivel 3 -->
@@ -226,9 +257,9 @@
                     <!-- Ejercicio 4 -->
                     <hgroup>
                         <h3>Ejercicio 4</h3>
-                        <p>Operador ternario dentro de un bucle: Escribe una función parOImpar que acepte un array de
-                            números y utilice un bucle para recorrer el array. Dentro del bucle, utiliza el operador
-                            ternario para determinar si cada número es parejo o impar.
+                        <p class="pt-1">Operador ternario dentro de un bucle: Escribe una función parOImpar que acepte
+                            un array de números y utilice un bucle para recorrer el array. Dentro del bucle, utiliza el
+                            operador ternario para determinar si cada número es parejo o impar.
                         </p>
                     </hgroup>
                     <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
@@ -245,6 +276,111 @@
                 </aside>
             </section>
 
+            <hr>
+
+            <!-- section title [Operador Ternario]-->
+            <section id="callbacks">
+                <h1>(CB) Callbacks</h1>
+                <!-- section nav -->
+                <section class="container pt-1">
+                    <aside>
+                        <nav>
+                            <ul>
+                                <li><a href="#cb-nivel-1">Nivel 1</a></li>
+                                <li><a href="#cb-nivel-2">Nivel 2</a></li>
+                                <li><a href="#cb-nivel-3">Nivel 3</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                </section>
+                <!-- Nivel 1 -->
+                <section id="cb-nivel-1">
+                    <h2><mark>Nivel 1</mark></h2>
+                    <hr>
+
+                    <!-- Ejercicio 1 -->
+                    <hgroup class="pt-1">
+                        <h3>Ejercicio 1</h3>
+                        <p class="pt-1">Callback básico: Escribe una función llamada procesar que acepte dos parámetros:
+                            un número y una función de callback. La función procesar tiene que invocar la función de
+                            callback, pasando el número como parámetro.
+                        </p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Solution ►</ins></p>
+
+                    <!-- Ejercicio 2 -->
+
+                    <hgroup class="pt-1 ">
+                        <h3>Ejercicio 2</h3>
+                        <p class="pt-1">Callbacks con operaciones matemáticas: Escribe una función calculadora que
+                            acepte tres parámetros: dos números y una función de callback. La función calculadora tiene
+                            que invocar la función de callback con los dos números como parámetros. Después, llamamiento
+                            calculador con una función que haga la suma de los dos números.
+                        </p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Solution ►</ins></p>
+                </section>
+                <!-- Nivel 2 -->
+                <section id="cb-nivel-2">
+                    <h2><mark>Nivel 2</mark></h2>
+                    <hr>
+
+                    <!-- Ejercicio 3 -->
+                    <hgroup>
+                        <h3>Ejercicio 3</h3>
+                        <p class="pt-1">Uso de callbacks en funciones asíncronas: Escribe una función esperarISaludar
+                            que acepte dos parámetros: un nombre y una función de callback. La función tiene que esperar
+                            2 según y entonces invocar la función de callback, pasando el nombre como parámetro.</p>
+                    </hgroup>
+
+                    <p class="pb-1"><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Solution ►</ins></p>
+
+                    <!-- Ejercicio 4 -->
+                    <hgroup>
+                        <h3>Ejercicio 4</h3>
+                        <p class="pt-1">Callbacks con arrays: Escribe una función processarElements que acepte dos
+                            parámetros: un array y una función de callback. La función processarElements tiene que
+                            invocar la función de callback por cada elemento del array.</p>
+                    </hgroup>
+
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Solution ►</ins></p>
+                </section>
+
+                <!-- Nivel 3 -->
+                <section id="cb-nivel-3">
+                    <h2><mark>Nivel 3</mark></h2>
+                    <hr>
+
+                    <!-- Ejercicio 4 -->
+                    <hgroup>
+                        <h3>Ejercicio 5</h3>
+                        <p class="pt-1">Escribe una función processarCadena que acepte dos parámetros: una cadena de
+                            caracteres y una función de callback. La función processarCadena tiene que convertir la
+                            cadena a mayúsculas y entonces invocar la función de callback con la cadena transformada.
+                        </p>
+                    </hgroup>
+                    <p><ins data-tooltip="Ver consola JavaScript [ MAC: (⌥+⌘+J) | WIN (Ctr+Shift+J) ]"
+                            data-placement="right">Solution
+                            ►</ins></p>
+                </section>
+
+                <!-- section [back to #callbacks]-->
+                <aside>
+                    <nav>
+                        <ul>
+                            <li><a class="chapter" href="#callbacks">▲ Volver a Callbacks</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </section>
+
+            <hr>
     </main>
 
 
