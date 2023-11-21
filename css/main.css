@@ -30,3 +30,12 @@
 .pt-2 {
   padding-top: calc(var(--pico-spacing) * 2);
 }
+
+/* --- styles ---- */
+.chapter {
+  color: #bb972c;
+}
+.chapter:hover {
+  text-decoration: underline;
+  color: #bb972c;
+}
