@@ -458,5 +458,146 @@ console.log('%cBloc 1.5: Array transformations', styleLog);
 console.log('----------------------------------------------');
 console.log('### Array transformations');
 console.log('----------------------------------------------');
-console.log('## Nivel 1 [RSO]');
+console.log('## Nivel 1 [AT]');
 console.log('# Ejercicio 1');
+
+/*  -- Ejercicio 1 :
+    -- Función MAP */
+
+console.log('# ► Array utilizada => [1, 2, 3, 4]');
+const numeros = [1, 2, 3, 4];
+const dobles = numeros.map(function (numero) {
+  return Math.pow(numero, 2); // método que calcula el cuadrado
+});
+
+console.log('-- Ver Números');
+console.log(numeros);
+console.log('-- Ver Números al cuadrado');
+console.log(dobles);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [AT]');
+console.log('# Ejercicio 2');
+
+/*  -- Ejercicio 2 :
+    -- Función Filter */
+
+console.log('# ► Array utilizada => [1, 2, 3, 4]');
+const numeros2 = [1, 2, 3, 4];
+const numerosPares = numeros2.filter((numero) => numero % 2 == 0);
+console.log(numerosPares);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [AT]');
+console.log('# Ejercicio 3');
+
+/*  -- Ejercicio 3 :
+    -- Función Find */
+
+console.log('# ► Array utilizada => [1, 10, 8, 11]');
+const numeros3 = [1, 10, 8, 11];
+const numFind = numeros3.find((numero) => numero > 10);
+
+console.log(numFind);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 4 [AT]');
+console.log('# Ejercicio 4');
+
+/*  -- Ejercicio 4 :
+    -- Función Reduce */
+
+console.log('# ► Array utilizada => [13, 7, 8, 21]');
+const numeros4 = [13, 7, 8, 21];
+
+const valorInicial = 0;
+const sumNumeros4 = numeros4.reduce((prevValue, nextValue) => prevValue + nextValue, 0);
+
+console.log(sumNumeros4);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [AT]');
+console.log('# Ejercicio 5');
+
+/*  -- Ejercicio 5 :
+    -- Función que filtra, multiplica, suma y devuelve resultado */
+
+console.log('# ► Array utilizada => [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]');
+const numeros5 = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+
+// filtrar números mayores o iguales a 10.
+console.log('filtrar números mayores o iguales a 10');
+const filtroNum = numeros5.filter((numero) => numero >= 10);
+console.log(filtroNum);
+
+// Multiplica cada número filtrado por 2
+console.log('Multiplica cada número filtrado por 2');
+const filtroNumPorDos = filtroNum.map(function (numero) {
+  return numero * 2; // método que calcula el cuadrado
+});
+console.log(filtroNumPorDos);
+
+// calcula la suma de los números filtrado y multiplicados por 2
+console.log('calcula la suma de los números filtrado y multiplicados por 2');
+const sumNumFiltrados = filtroNumPorDos.reduce((prevValue, nextValue) => prevValue + nextValue, 0);
+console.log(sumNumFiltrados);
+
+// Ahora vamos a intentar realizar todos estos métodos en una única función y que ocupe una sola línea.
+
+const ej5 = (numeros5) => {
+  const resultado = numeros5
+    .filter((numero) => numero >= 10)
+    .map((numero) => numero * 2)
+    .reduce((prevValue, nextValue) => prevValue + nextValue, 0);
+
+  console.log(resultado);
+};
+
+ej5(numeros5);
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [AT]');
+console.log('# Ejercicio 6');
+
+// Vídeo Youtube: https://youtu.be/37RiYprt1CU?si=fX38A73v92ytNVMD
+
+/*  -- Ejercicio 6 :
+    -- Every /Some */
+
+console.log('# ► Array utilizada => [11,12,13,14]');
+const numeros6 = [11, 12, 13, 14];
+
+// verificar con el método every si todos o algunos de los elementos son mayores que 10, respectivamente
+
+function esMayorQue10(numero) {
+  return numero > 10;
+}
+
+const everyNumMayorQue10 = numeros6.every(esMayorQue10);
+console.log('Método Every > 10');
+console.log(everyNumMayorQue10);
+
+const someNumMayorQue10 = numeros6.some(esMayorQue10);
+console.log('Método Some > 10');
+console.log(someNumMayorQue10);
+
+// -------------------------------------------------------------------
+console.log('%cBloc 1.6: Array loops', styleLog);
+console.log('----------------------------------------------');
+console.log('### Array loops');
+console.log('----------------------------------------------');
+console.log('## Nivel 1 [AL]');
+console.log('# Ejercicio 1');
+
+/*  -- Ejercicio 1 :
+    -- Bucle forEach */
