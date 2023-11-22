@@ -678,7 +678,7 @@ console.log('----------------------------------------------');
 console.log('## Nivel 3 [AL]');
 console.log('# Ejercicio 6');
 
-/*  -- Ejercicio 5 :
+/*  -- Ejercicio 6 :
     -- for of con index */
 
 let nombres3 = ['Anna', 'Bernat', 'Clara'];
@@ -694,6 +694,7 @@ console.log('### Promises & Async/Await');
 console.log('----------------------------------------------');
 console.log('## Nivel 1 [PAA]');
 console.log('# Ejercicio 1');
+console.log('# Ejercicio 1 [Revisar el JS]');
 
 /*  -- Ejercicio 1 :
     -- Creación de una Promesa */
@@ -701,3 +702,122 @@ console.log('# Ejercicio 1');
 const promesa = new Promise((resolve, reject) => {
   setTimeout(() => resolve('Hola, mundo'), 2000);
 });
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 2');
+console.log('# Ejercicio 2 [Revisar el JS]');
+/*  -- Ejercicio 2 :
+    -- añade .then a la promesa anterior */
+
+promesa.then((resultado) => {
+  console.log(resultado); // Imprimirá 'Hola, mundo' después de 2 segundos
+});
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 3');
+console.log('# Ejercicio 3 [Revisar el JS]');
+
+/*  -- Ejercicio 3 :
+    -- promesa con reject */
+
+const miPromesa = (input) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (input === 'Hola') {
+        resolve('¡La promesa se resolvió!');
+      } else {
+        reject('¡La promesa fue rechazada!');
+      }
+    }, 2000);
+  });
+};
+
+// Ejemplo de uso
+miPromesa('Hola')
+  .then((resultado) => {
+    console.log(resultado); // Se imprimirá si el input es 'Hola'
+  })
+  .catch((error) => {
+    console.error(error); // Se imprimirá si el input no es 'Hola'
+  });
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+
+console.log('# Ejercicio 4');
+console.log('# Ejercicio 4 [Revisar el JS]');
+
+/*  -- Ejercicio 4 :
+    -- async await */
+
+async function asyncCall() {
+  console.log('calling');
+  const resultado = await promesa;
+  console.log(resultado); // "resolved"
+}
+
+asyncCall();
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 2 [PAA]');
+console.log('# Ejercicio 5');
+console.log('# Ejercicio 5 [Revisar el JS]');
+
+/*  -- Ejercicio 5 :
+    -- Gestión errores async await */
+
+async function asyncCall() {
+  console.log('calling');
+  try {
+    const resultado = await promesa;
+    console.log(resultado); // "resolved"
+  } catch (error) {
+    console.error('Hubo un error:', error);
+  }
+}
+
+asyncCall();
+
+// -------------------------------------------------------------------
+
+console.log('----------------------------------------------');
+console.log('## Nivel 3 [PAA]');
+console.log('# Ejercicio 6');
+console.log('# Ejercicio 6 [Revisar el JS]');
+
+/*  -- Ejercicio 6 :
+    -- Promise.all */
+
+// Función que devuelve una promesa que se resuelve después de un tiempo dado
+const promesaConRetardo = (tiempo, resultado) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(resultado);
+    }, tiempo);
+  });
+};
+
+// Dos promesas que se resuelven después de 2 y 3 segundos respectivamente
+const promesa1 = promesaConRetardo(2000, 'Resultado de la primera promesa');
+const promesa2 = promesaConRetardo(3000, 'Resultado de la segunda promesa');
+
+// Utilizando Promise.all para esperar a que ambas promesas se resuelvan
+Promise.all([promesa1, promesa2])
+  .then((resultados) => {
+    // resultados es un array con los resultados de ambas promesas
+    console.log('Ambas promesas se han resuelto correctamente:');
+    console.log('Resultado de la primera promesa:', resultados[0]);
+    console.log('Resultado de la segunda promesa:', resultados[1]);
+  })
+  .catch((error) => {
+    console.error('Hubo un error:', error);
+  });
