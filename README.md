@@ -18,11 +18,15 @@ In this Sprint, we will embark on a journey into the world of javascript. First 
 
 ## Technologies Used
 
-Throughout Sprint 01, you'll be working with the following fundamental technologies:
+Throughout this project, you'll be working with the following fundamental technologies:
 
 - **HTML5:** HTML5 provides the basis for organizing web content and ensuring compatibility across devices.
 
 - **CSS3:** CSS3 allows you to apply styles and visual enhancements to your web layouts, fostering creativity and design consistency.
+
+- **JavaScript:** JavaScript adds dynamic and interactive elements to your project, enhancing the user experience and enabling more advanced functionalities.
+
+- **PicoCSS v2:** PicoCSS v2 is a lightweight CSS framework that simplifies styling and layout tasks, making it easier to create responsive and visually appealing web designs.
 
 - **Design Tools:** Work with design tools such as Figma and Photoshop to bring your layouts to life.
 
@@ -34,11 +38,11 @@ Dev Skills
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-Design Skills
+CSS Framework
 
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black)
+![PicoCSS v2](https://img.shields.io/badge/PicoCSS%20v2-3498DB?style=for-the-badge&logo=pico&logoColor=white)
 
 Build with
 
